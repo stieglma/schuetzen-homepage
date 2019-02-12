@@ -13,4 +13,4 @@ markdown = "*"
 python_version = "3.7"
 
 [scripts]
-dev-server = "pelican --listen"
+dev-server = "make devserver"
