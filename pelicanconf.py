@@ -20,17 +20,26 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+DELETE_OUTPUT_DIRECTORY = True
 
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+ARTICLE_URL = 'blog/{slug}/'
+ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
+ARTICLE_ORDER_BY = 'date'
+
+DIRECT_TEMPLATES = ['index','blog']
+PAGINATED_TEMPLATES = {'blog': 10}
+
+SLUGIFY_SOURCE = 'title'
+
+SUMMARY_MAX_LENGTH = 65
 
 DEFAULT_PAGINATION = 10
+
+PAGINATION_PATTERNS = (
+  (1, '{base_name}/', '{base_name}/index.html'),
+  (2, '{base_name}/{number}/', '{base_name}/{number}/index.html'),
+)
+
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
