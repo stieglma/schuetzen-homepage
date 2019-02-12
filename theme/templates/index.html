@@ -1,20 +1,11 @@
 {% extends "base.html" %}
 {% block header %}
 <header id="home">
-	<!-- Background Image -->
 	<div class="bg-img" style="background-image: url('{{ SITEURL }}/theme/img/schuetzenverein_sw.jpg');">
 		<div class="overlay"></div>
 	</div>
-
-	<!-- Nav -->
 	<nav id="nav" class="navbar nav-transparent">
 		<div class="container">
-			<div class="navbar-header">
-				<div class="nav-collapse">
-					<span></span>
-				</div>
-			</div>
-			<!--  Main navigation  -->
 			<ul class="main-nav nav navbar-nav navbar-right">
 				<li><a href="#home">Start</a></li>
 				<li><a href="#about">Über Uns</a></li>
@@ -29,7 +20,6 @@
 	<div class="home-wrapper">
 		<div class="container">
 			<div class="row">
-				<!-- home -->
 				<div class="col-md-10 col-md-offset-1">
 					<div class="home-content">
 						<img height="400px" src="{{ SITEURL }}/theme/img/logo_transparent.png" />
@@ -45,6 +35,7 @@
 </header>
 {% endblock header %}
 {% block content %}
+
 <!-- About -->
 <div id="about" class="section md-padding">
 	<div class="container">
@@ -52,7 +43,6 @@
 			<h2 class="title">Über Uns</h2>
 		</div>
 		<div class="row">
-			<!-- about -->
 			<div class="col-md-4">
 				Uns, die Edelweißschützen Gaishofen gibt es schon seit 1963. <br />
 				// TODO Text über Gaishofen, bisschen Vergangenheit, bisschen aktuell <br />
@@ -64,7 +54,7 @@
 	</div>
 </div>
 
-<!-- zahlen einschub -->
+<!-- Zahlen über Verein -->
 <div id="numbers" class="section sm-padding">
 	<div class="bg-img" style="background-image: url('{{ SITEURL }}/theme/img/bogen_sw.jpg');">
 		<div class="overlay"></div>
