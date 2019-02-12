@@ -38,6 +38,9 @@
 						<ul class="blog-meta">
 							<li><i class="fa fa-user"></i>{{ article.author }}</li>
 							<li><i class="fa fa-clock-o"></i>{{ article.date }}</li>
+							{% if article.shortpost == "false" %}
+							<li style="float:right"><a href="{{ SITEURL }}/blog/{{article.slug}}/"><i class="fas fa-external-link-alt"></i> Weiterlesen</button></a></li>
+							{% endif %}
 						</ul>
 						{{ article.summary }}
 					</div>
@@ -49,11 +52,6 @@
 						{% endfor %}
 					</div>
 
-					{% if article.shortpost == "false" %}
-					<div class="readon">
-						<a href="{{ SITEURL }}/blog/{{article.slug}}/"><button class="white-btn">Wer sind wir</button></a>
-					</div>
-					{% endif %}
 				</div>
 			</main>
 		</div>
