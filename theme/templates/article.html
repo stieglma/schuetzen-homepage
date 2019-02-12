@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block header %}
+<header>
+	<nav id="nav" class="navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<div class="navbar-brand">
+					<a href="{{ SITEURL }}/index.html">
+						<img class="logo" src="{{ SITEURL }}/theme/img/logo.png" alt="logo">
+					</a>
+				</div>
+			</div>
+
+			<ul class="main-nav nav navbar-nav navbar-right">
+				<li><a href="{{ SITEURL }}/index.html#home">Start</a></li>
+				<li><a href="{{ SITEURL }}/index.html#about">Über Uns</a></li>
+				<li><a href="{{ SITEURL }}/index.html#training">Training</a></li>
+				<li><a href="{{ SITEURL }}/index.html#impressions">Impressionen</a></li>
+				<li><a href="{{ SITEURL}}/blog/index.html">Blog</a></li>
+				<li><a href="{{ SITEURL }}/index.html#contact">Kontakt & Impressum</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+{% endblock header %}
+
+{% block content %}
+<div id="blog" class="section md-padding bg-grey">
+	<div class="container">
+		<div class="row">
+			<main id="main" class="col-md-9">
+				<div class="blog">
+					<div class="blog-img">
+						<img class="img-responsive" src="{{ SITEURL }}/theme/img/blog-post.jpg" alt="">
+					</div>
+					<div class="blog-content">
+						<ul class="blog-meta">
+							<li><i class="fa fa-user"></i>{{ article.author }}</li>
+							<li><i class="fa fa-clock-o"></i>{{ article.date }}</li>
+						</ul>
+						{{ article.content }}
+					</div>
+		
+					<div class="blog-tags">
+						<h5>Tags :</h5>
+						{% for tag in article.tags if tag %}
+						<a href="#"><i class="fa fa-tag"></i>{{ tag }}</a>
+						{% endfor %}
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
