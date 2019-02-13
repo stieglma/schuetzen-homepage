@@ -35,12 +35,16 @@ SLUGIFY_SOURCE = 'title'
 SUMMARY_MAX_LENGTH = 65
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ["assets", "minify"]
+PLUGINS = ["assets", "image_process", "minify"]
 
 MINIFY = {
   'remove_comments': True,
   'remove_all_empty_space': True,
   'remove_optional_attribute_quotes': False
+}
+
+IMAGE_PROCESS = {
+    'same-size-thumb': {'type': 'image', 'ops': ["scale_in 350 300 True"]}
 }
 
 # Uncomment following line if you want document-relative URLs when developing
