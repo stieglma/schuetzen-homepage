@@ -35,7 +35,13 @@ SLUGIFY_SOURCE = 'title'
 SUMMARY_MAX_LENGTH = 65
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ["assets"]
+PLUGINS = ["assets", "minify"]
+
+MINIFY = {
+  'remove_comments': True,
+  'remove_all_empty_space': True,
+  'remove_optional_attribute_quotes': False
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

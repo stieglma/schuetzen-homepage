@@ -9,6 +9,7 @@ markdown = "*"
 webassets = "*"
 cssmin = "*"
 jsmin = "*"
+pelican-minify = "*"
 
 [packages]
 

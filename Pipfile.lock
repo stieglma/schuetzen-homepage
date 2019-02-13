@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "306b02d23e0bedf4f82ec498b4971303e50da8917c2796ac6ccc4c078f8ee145"
+            "sha256": "7b15d183f98fe0a876012973fe9533eb83fe42bc96b6069ca2883f2ee5576418"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -44,12 +44,25 @@
             ],
             "version": "==1.9"
         },
+        "htmlmin": {
+            "hashes": [
+                "sha256:50c1ef4630374a5d723900096a961cff426dff46b48f34d194a81bbe14eca178"
+            ],
+            "version": "==0.1.12"
+        },
         "jinja2": {
             "hashes": [
                 "sha256:74c935a1b8bb9a3947c50a54766a969d4846290e1e788ea44c1392163723c3bd",
                 "sha256:f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4"
             ],
             "version": "==2.10"
+        },
+        "joblib": {
+            "hashes": [
+                "sha256:21e0c34a69ad7fde4f2b1f3402290e9ec46f545f15f1541c582edfe05d87b63a",
+                "sha256:315d6b19643ec4afd4c41c671f9f2d65ea9d787da093487a81ead7b0bac94524"
+            ],
+            "version": "==0.13.2"
         },
         "jsmin": {
             "hashes": [
@@ -106,6 +119,14 @@
             ],
             "index": "pypi",
             "version": "==4.0.1"
+        },
+        "pelican-minify": {
+            "hashes": [
+                "sha256:a0ffa9b1f15089bc4aec4692c5feba87356d427a7946ffd8b6222ac4c7758773",
+                "sha256:fcefce477d4a24c8972ec8871738100f144e329201ab2b45aab8b5d3b7ba8e65"
+            ],
+            "index": "pypi",
+            "version": "==0.9"
         },
         "pygments": {
             "hashes": [
