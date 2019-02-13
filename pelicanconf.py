@@ -27,19 +27,14 @@ ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
 ARTICLE_ORDER_BY = 'date'
 
 DIRECT_TEMPLATES = ['index','blog']
-PAGINATED_TEMPLATES = {'blog': 10}
+PAGINATED_TEMPLATES = {}
 
 SLUGIFY_SOURCE = 'title'
 
 SUMMARY_MAX_LENGTH = 65
 
-DEFAULT_PAGINATION = 10
-
-PAGINATION_PATTERNS = (
-  (1, '{base_name}/', '{base_name}/index.html'),
-  (2, '{base_name}/{number}/', '{base_name}/{number}/index.html'),
-)
-
+PLUGIN_PATHS = ['./plugins']
+PLUGINS = ["assets"]
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

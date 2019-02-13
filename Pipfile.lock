@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e45140abf9a472f7fb76b65bb04a05c97069b9bf1c2aaa3e2fe2249f7642eaf1"
+            "sha256": "bb8b35bf934f37bd04c36def48ec768403e6551648d7617e366c7b0e6a759e6a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,12 +15,20 @@
             }
         ]
     },
-    "default": {
+    "default": {},
+    "develop": {
         "blinker": {
             "hashes": [
                 "sha256:471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6"
             ],
             "version": "==1.4"
+        },
+        "cssmin": {
+            "hashes": [
+                "sha256:e012f0cc8401efcf2620332339011564738ae32be8c84b2e43ce8beaec1067b6"
+            ],
+            "index": "pypi",
+            "version": "==0.2.0"
         },
         "docutils": {
             "hashes": [
@@ -113,6 +121,13 @@
             ],
             "version": "==2018.9"
         },
+        "rjsmin": {
+            "hashes": [
+                "sha256:dd9591aa73500b08b7db24367f8d32c6470021f39d5ab4e50c7c02e4401386f1"
+            ],
+            "index": "pypi",
+            "version": "==1.0.12"
+        },
         "six": {
             "hashes": [
                 "sha256:3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c",
@@ -126,7 +141,13 @@
                 "sha256:8b85354be8fd0c0e10adbf0675f6dc2310e56fda43fa8fe049123b6c475e52fb"
             ],
             "version": "==1.0.23"
+        },
+        "webassets": {
+            "hashes": [
+                "sha256:e7d9c8887343123fd5b32309b33167428cb1318cdda97ece12d0907fd69d38db"
+            ],
+            "index": "pypi",
+            "version": "==0.12.1"
         }
-    },
-    "develop": {}
+    }
 }
