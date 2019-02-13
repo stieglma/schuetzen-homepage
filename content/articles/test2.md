@@ -5,4 +5,3 @@ Tags: pelican, publishing
 Slug: my-super-post2
 Author: Alexis Metaireau
 Summary: Short version for index and feeds 222
-shortpost: false

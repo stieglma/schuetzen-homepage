@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block header %}
 <header>
-	<nav id="nav" class="navbar">
+	<nav id="nav" class="navbar grey">
 		<div class="container">
 			<div class="navbar-header">
 				<div class="navbar-brand">
@@ -25,19 +25,20 @@
 {% endblock header %}
 
 {% block content %}
-<div id="blog" class="section md-padding bg-grey">
+<div id="blog" class="section" style="padding-top:40px;">
 	<div class="container">
-		<div class="row">
-			<main id="main" class="col-md-9">
+		<div class="row s-padding">
+			<main id="main" class="col-md-8 col-md-offset-2 blog-box">
 				<div class="blog">
 					<div class="blog-img">
-						<img class="img-responsive" src="{{ SITEURL }}/theme/img/blog-post.jpg" alt="">
+						<img class="img-responsive" src="{{ SITEURL }}/theme/img/tag_der_offenen_tuer.jpg" alt="">
 					</div>
 					<div class="blog-content">
 						<ul class="blog-meta">
 							<li><i class="fa fa-user"></i>{{ article.author }}</li>
-							<li><i class="fa fa-clock-o"></i>{{ article.date }}</li>
+							<li><i class="fa fa-clock-o"></i>{{ article.date | strftime('%d %B %Y') }}</li>
 						</ul>
+						<h3>{{ article.title }}</h3>
 						{{ article.content }}
 					</div>
 		

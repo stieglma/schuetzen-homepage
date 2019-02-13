@@ -134,6 +134,10 @@ ul, ol {
     padding-bottom: 60px;
 }
 
+.s-padding {
+    padding-bottom: 60px;
+}
+
 
 /* --  background section  -- */
 
@@ -303,6 +307,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     z-index: 999;
 }
 
+#nav.grey {
+    background-color: #FAFAFA;
+}
+
 #nav.navbar {
     border: none;
     border-radius: 0;
@@ -316,6 +324,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     padding: 0px 0px;
     background-color: #FFF !important;
     border-bottom: 1px solid #EEE;
+}
+#nav.fixed-nav.grey {
+    background-color: #FAFAFA !important;
 }
 
 #nav.nav-transparent {
@@ -1183,7 +1194,7 @@ header {
 /* -- blog tags -- */
 
 .blog-tags {
-    margin: 40px 0px;
+    margin: 30px 0px 10px 0px;
 }
 
 .blog-tags h5 {
@@ -1195,7 +1206,7 @@ header {
     display: inline-block;
     padding: 6px 13px;
     font-size: 14px;
-    margin: 2px 0px;
+    margin: 2px 2px;
     background: #F4F4F4;
     color: #10161A;
 }
@@ -1677,35 +1688,14 @@ header {
 
 
 /*------------------------------------*\
-	Back to top
+	Blog borders
 \*------------------------------------*/
 
-#back-to-top {
-  	display:none;
-  	position: fixed;
-  	bottom: 20px;
-  	right: 20px;
-  	width: 50px;
-  	height: 50px;
-  	line-height: 50px;
-  	text-align: center;
-  	background: #6195FF;
-  	border-radius:3px;
-  	color: #FFF;
-  	z-index: 9999;
-    -webkit-transition: 0.2s opacity;
-    transition: 0.2s opacity;
-  	cursor: pointer;
+.blog-box {
+    padding-left: 10px;
+    border-left: 4px solid #f0f0f0;
 }
 
-#back-to-top:after {
-    content: "\f106";
-    font-family: 'FontAwesome';
-}
-
-#back-to-top:hover {
-    opacity: 0.8;
-}
 
 /*------------------------------------*\
 	Preloader

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block header %}
 <header>
-	<nav id="nav" class="navbar">
+	<nav id="nav" class="navbar grey">
 		<div class="container">
 			<div class="navbar-header">
 				<div class="navbar-brand">
@@ -16,7 +16,7 @@
 				<li><a href="{{ SITEURL }}/index.html#about">Über Uns</a></li>
 				<li><a href="{{ SITEURL }}/index.html#training">Training</a></li>
 				<li><a href="{{ SITEURL }}/index.html#impressions">Impressionen</a></li>
-				<li><a href="{{ SITEURL }}/blog/index.html">Blog</a></li>
+				<li><a href="{{ SITEURL }}/blog.html">Blog</a></li>
 				<li><a href="{{ SITEURL }}/index.html#contact">Kontakt & Impressum</a></li>
 			</ul>
 		</div>
@@ -25,23 +25,24 @@
 {% endblock header %}
 
 {% block content %}
-<div id="blog" class="section md-padding bg-grey">
+<div id="blog" class="section" style="padding-top:40px;">
 	<div class="container">
 		{% for article in articles %}
-		<div class="row">
-			<main id="main" class="col-md-9">
+		<div class="row s-padding">
+			<main id="main" class="col-md-8 col-md-offset-2 blog-box">
 				<div class="blog">
 					<div class="blog-img">
-						<img class="img-responsive" src="{{ SITEURL }}/theme/img/blog-post.jpg" alt="">
+						<img class="img-responsive" src="{{ SITEURL }}/theme/img/tag_der_offenen_tuer.jpg" alt="">
 					</div>
 					<div class="blog-content">
 						<ul class="blog-meta">
 							<li><i class="fa fa-user"></i>{{ article.author }}</li>
 							<li><i class="fa fa-clock-o"></i>{{ article.date | strftime('%d %B %Y') }}</li>
 							{% if article.shortpost == "false" %}
-							<li style="float:right"><a href="{{ SITEURL }}/blog/{{article.slug}}/"><i class="fas fa-external-link-alt"></i> Weiterlesen</button></a></li>
+							<li style="float:right"><a href="{{ SITEURL }}/blog/{{article.slug}}/"><button><i class="fas fa-external-link-alt"></i> Weiterlesen</button></a></li>
 							{% endif %}
 						</ul>
+						<h3>{{ article.title }}</h3>
 						{{ article.summary }}
 					</div>
 		
