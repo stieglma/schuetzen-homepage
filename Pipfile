@@ -8,7 +8,7 @@ pelican = "*"
 markdown = "*"
 webassets = "*"
 cssmin = "*"
-rjsmin = "*"
+jsmin = "*"
 
 [packages]
 

@@ -27,7 +27,7 @@
 {% block content %}
 <div id="blog" class="section md-padding bg-grey">
 	<div class="container">
-		{% for article in articles_page.object_list if article %}
+		{% for article in articles %}
 		<div class="row">
 			<main id="main" class="col-md-9">
 				<div class="blog">
@@ -37,7 +37,7 @@
 					<div class="blog-content">
 						<ul class="blog-meta">
 							<li><i class="fa fa-user"></i>{{ article.author }}</li>
-							<li><i class="fa fa-clock-o"></i>{{ article.date }}</li>
+							<li><i class="fa fa-clock-o"></i>{{ article.date | strftime('%d %B %Y') }}</li>
 							{% if article.shortpost == "false" %}
 							<li style="float:right"><a href="{{ SITEURL }}/blog/{{article.slug}}/"><i class="fas fa-external-link-alt"></i> Weiterlesen</button></a></li>
 							{% endif %}

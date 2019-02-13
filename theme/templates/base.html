@@ -12,28 +12,9 @@
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
 
-	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" />
-
-	<!-- Owl Carousel -->
-	<link type="text/css" rel="stylesheet" href="{{ SITEURL }}/theme/css/owl.carousel.css" />
-	<link type="text/css" rel="stylesheet" href="{{ SITEURL }}/theme/css/owl.theme.default.css" />
-
-	<!-- Magnific Popup -->
-	<link type="text/css" rel="stylesheet" href="{{ SITEURL }}/theme/css/magnific-popup.css" />
-
-	<!-- Font Awesome Icon -->
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
-
-	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" />
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+    {% assets filters="cssmin", output="css/style.min.css", "css/bootstrap.min.css", "css/owl.carousel.css", "css/owl.theme.default.css", "css/magnific-popup.css", "css/font-awesome.min.css", "css/style.css" %}
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
 </head>
 
 <body>
@@ -89,10 +70,54 @@
 <!-- /Preloader -->
 
 <!-- jQuery Plugins -->
-<script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
-<script type="text/javascript" src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="{{ SITEURL }}/theme/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery.magnific-popup.js"></script>
-<script type="text/javascript" src="{{ SITEURL }}/theme/js/main.js"></script>
+{% assets filters="jsmin" , output="js/packed.js", "js/jquery.min.js", "js/bootstrap.min.js", "js/owl.carousel.min.js", "js/jquery.magnific-popup.js" %}
+<script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+{% endassets %}
+<script type="text/javascript">
+(function($) {
+	///////////////////////////
+	// Preloader
+	$(window).on('load', function() {
+		$("#preloader").delay(600).fadeOut();
+	});
+
+	///////////////////////////
+	// Scrollspy
+	$('body').scrollspy({
+		target: '#nav',
+		offset: $(window).height() / 2
+	});
+
+	///////////////////////////
+	// Smooth scroll
+	$("#nav .main-nav a[href^='#']").on('click', function(e) {
+		e.preventDefault();
+		var hash = this.hash;
+		$('html, body').animate({
+			scrollTop: $(this.hash).offset().top
+		}, 600);
+	});
+
+	///////////////////////////
+	// On Scroll
+	$(window).on('scroll', function() {
+		var wScroll = $(this).scrollTop();
+
+		// Fixed nav
+		wScroll > 1 ? $('#nav').addClass('fixed-nav') : $('#nav').removeClass('fixed-nav');
+
+		// Back To Top Appear
+		wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();
+	});
+
+	///////////////////////////
+	// magnificPopup
+	$('.work').magnificPopup({
+		delegate: '.lightbox',
+		type: 'image'
+	});
+
+})(jQuery);
+</script>
 </body>
 </html>
