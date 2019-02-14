@@ -1163,6 +1163,14 @@ header {
     padding: 20px 20px 40px;
 }
 
+.blog-content ul:not(.blog-meta) li::before {
+    color: #6195FF;
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
+
 .blog .blog-meta {
     margin-bottom: 20px;
 }

@@ -228,7 +228,6 @@ def compute_paths(img, settings, derivative):
     process_dir = settings['IMAGE_PROCESS_DIR']
     url_path, filename = os.path.split(img['src'])
     base_url = os.path.join(url_path, process_dir, derivative)
-    print(process_dir, url_path, filename, base_url)
 
     if 'filenames' in settings:
         for f in settings['filenames']:
@@ -237,12 +236,9 @@ def compute_paths(img, settings, derivative):
                 base_path = os.path.join(settings['OUTPUT_PATH'], os.path.dirname(settings['filenames'][f].save_as), process_dir, derivative)
                 break
     elif url_path.startswith("/theme"):
-        print(settings["PATH"], settings["OUTPUT_PATH"])
-        print(img["src"][7:])
         # remove "/content"
         source = os.path.join(settings['PATH'][:-8], "theme", "static", img['src'][7:])
         base_path = os.path.join(settings['OUTPUT_PATH'], base_url[1:])
-        print(source, base_path)
     else:
         source = os.path.join(settings['PATH'], img['src'][1:])
         base_path = os.path.join(settings['OUTPUT_PATH'], base_url[1:])

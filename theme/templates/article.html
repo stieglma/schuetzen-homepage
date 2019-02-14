@@ -31,7 +31,11 @@
 			<main id="main" class="col-md-8 col-md-offset-2 blog-box">
 				<div class="blog">
 					<div class="blog-img">
-						<img class="img-responsive" src="{{ SITEURL }}/theme/img/tag_der_offenen_tuer.jpg" alt="">
+						{% if article.headerpicture %}
+						<img class="img-responsive" src="{{ SITEURL }}/images/{{ article.headerpicture }}" alt="">
+						{% else %}
+						<img class="img-responsive" src="{{ SITEURL }}/theme/img/{{ DEFAULT_HEADER_IMAGE }}" alt="">
+						{% endif %}	
 					</div>
 					<div class="blog-content">
 						<ul class="blog-meta">
