@@ -53,7 +53,8 @@ IMAGE_PROCESS = {
 
 STATIC_PATHS = ['images', 'extra']
 EXTRA_PATH_METADATA = {
-  'extra/favicon.ico': {'path': 'favicon.ico'}
+  'extra/favicon.ico': {'path': 'favicon.ico'},
+  'extra/.htaccess': {'path': '.htaccess'}
 }
 
 # Uncomment following line if you want document-relative URLs when developing
