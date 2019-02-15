@@ -12,7 +12,7 @@
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
 
-    {% assets filters="cssmin", output="css/style.min.css", "css/bootstrap.min.css", "css/owl.carousel.css", "css/owl.theme.default.css", "css/magnific-popup.css", "css/font-awesome.min.css", "css/style.css" %}
+    {% assets filters="cssmin", output="css/style.min.css", "css/bootstrap.min.css",  "css/magnific-popup.css", "css/font-awesome.min.css", "css/style.css" %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
     {% endassets %}
 </head>
@@ -70,7 +70,7 @@
 <!-- /Preloader -->
 
 <!-- jQuery Plugins -->
-{% assets filters="jsmin" , output="js/packed.js", "js/jquery.min.js", "js/bootstrap.min.js", "js/owl.carousel.min.js", "js/jquery.magnific-popup.js" %}
+{% assets filters="jsmin" , output="js/packed.js", "js/jquery.min.js", "js/bootstrap.min.js", "js/jquery.magnific-popup.js" %}
 <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
 {% endassets %}
 <script type="text/javascript">
