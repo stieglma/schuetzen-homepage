@@ -138,6 +138,10 @@ ul, ol {
     padding-bottom: 60px;
 }
 
+p {
+    text-align: justify;
+}
+
 
 /* --  background section  -- */
 
