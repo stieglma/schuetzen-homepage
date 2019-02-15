@@ -53,6 +53,10 @@
 		}, 600);
 	});
 
+	$('#nav .nav-collapse').on('click', function() {
+		$('#nav').toggleClass('open');
+	});
+
 	$(window).on('scroll', function() {
 		var wScroll = $(this).scrollTop();
 
