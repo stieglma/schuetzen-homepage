@@ -10,9 +10,8 @@
 	<title>HTML Template</title>
 
 	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
-
-    {% assets filters="cssmin", output="css/style.min.css", "css/bootstrap.min.css",  "css/magnific-popup.css", "css/font-awesome.min.css", "css/style.css" %}
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">	
+	{% assets filters="cssmin", output="css/style.min.css", "css/bootstrap.min.css",  "css/magnific-popup.css", "css/font-awesome.min.css", "css/style.css" %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
     {% endassets %}
 </head>
@@ -24,57 +23,28 @@
 {% block content %}
 {% endblock content %}
 
-<!-- Footer -->
 <footer id="footer" class="sm-padding bg-dark">
-
-    <!-- Container -->
     <div class="container">
-
-        <!-- Row -->
         <div class="row">
-
             <div class="col-md-12">
-
-                <!-- footer logo -->
                 <div class="footer-logo">
                     <a href="{{ SITEURL }}/index.html"><img src="{{ SITEURL }}/theme/img/logo_transparent.png" alt="logo"></a>
                 </div>
-                <!-- /footer logo -->
-
-                <!-- footer copyright -->
-                <div class="footer-copyright">
-                    <p>Copyright © 2017. All Rights Reserved. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-                </div>
-                <!-- /footer copyright -->
-
             </div>
-
-        </div>
-        <!-- /Row -->
-
+        </div> 
     </div>
-    <!-- /Container -->
-
 </footer>
-<!-- /Footer -->
 
-<!-- jQuery Plugins -->
 {% assets filters="jsmin" , output="js/packed.js", "js/jquery.min.js", "js/bootstrap.min.js", "js/jquery.magnific-popup.js" %}
 <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
 {% endassets %}
 <script type="text/javascript">
 (function($) {
-
-
-	///////////////////////////
-	// Scrollspy
 	$('body').scrollspy({
 		target: '#nav',
 		offset: $(window).height() / 2
 	});
 
-	///////////////////////////
-	// Smooth scroll
 	$("#nav .main-nav a[href^='#']").on('click', function(e) {
 		e.preventDefault();
 		var hash = this.hash;
@@ -83,8 +53,6 @@
 		}, 600);
 	});
 
-	///////////////////////////
-	// On Scroll
 	$(window).on('scroll', function() {
 		var wScroll = $(this).scrollTop();
 
@@ -95,13 +63,10 @@
 		wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();
 	});
 
-	///////////////////////////
-	// magnificPopup
 	$('.work').magnificPopup({
 		delegate: '.lightbox',
 		type: 'image'
 	});
-
 })(jQuery);
 </script>
 </body>
