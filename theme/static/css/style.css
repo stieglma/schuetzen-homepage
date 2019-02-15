@@ -91,6 +91,9 @@ ul, ol {
 .s-padding {
     padding-bottom: 60px;
 }
+.st-padding {
+    padding-bottom: 60px;
+}
 
 p {
     text-align: justify;
