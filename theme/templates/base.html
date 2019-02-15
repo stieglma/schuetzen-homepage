@@ -8,8 +8,7 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 	<title>{{ SITENAME }}</title>
-	
-	{% assets filters="cssmin", output="css/style.min.css", "css/bootstrap.min.css",  "css/magnific-popup.css", "css/font-awesome.min.css", "css/rubik-font.css", "css/style.css" %}
+	{% assets filters="cssmin", output="css/style.min.css", "css/bootstrap.min.css",  "css/magnific-popup.css", "css/rubik-font.css", "css/style.css" %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
     {% endassets %}
 </head>

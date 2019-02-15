@@ -34,6 +34,18 @@ h5 {
     font-size: 16px;
 }
 
+p > svg, a > svg, li > svg, button > svg {
+   height: 16px;
+   width: 16px;
+   fill: currentColor;
+}
+
+button.main-btn > svg {
+    fill: white;
+    height: 14px;
+    width: 14px;
+}
+
 a {
     color: #6195FF;
     text-decoration: none;
@@ -547,12 +559,13 @@ header {
     border: 1px solid #EEE;
 }
 
-.text-container > i {
+.text-container > svg {
     position: absolute;
     left: 20px;
     text-align: center;
-    font-size: 32px;
-    color: #6195FF;
+    height: 32px;
+    width: 32px;
+    fill: #6195FF;
     border-radius: 50%;
 }
 
@@ -589,7 +602,7 @@ header {
     border: 1px solid #EEE;
 }
 
-#textlike > i {
+#textlike > svg {
     position: absolute;
     left: 20px;
     text-align: center;
@@ -633,10 +646,11 @@ header {
     margin: 15px 0px;
 }
 
-.number i {
-    color: #6195FF;
-    font-size: 36px;
+.number svg {
+    fill: #6195FF;
     margin-bottom: 20px;
+    height: 36px;
+    width: 36px;
 }
 
 .number h3 {
@@ -676,7 +690,7 @@ header {
     margin-right: 10px;
 }
 
-.blog .blog-meta li i {
+.blog .blog-meta li svg {
     color: #6195FF;
     margin-right: 5px;
 }
@@ -718,12 +732,12 @@ header {
   background-color: #6195FF;
 }
 
-.blog-tags a i {
+.blog-tags a svg {
     margin-right: 3px;
     color: #6195FF;
 }
 
-.blog-tags a:hover i {
+.blog-tags a:hover svg {
   color: #FFF;
 }
 

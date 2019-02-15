@@ -39,17 +39,17 @@
 					</div>
 					<div class="blog-content">
 						<ul class="blog-meta">
-							<li><i class="fa fa-user"></i>{{ article.author }}</li>
-							<li><i class="fa fa-clock-o"></i>{{ article.date | strftime('%d %B %Y') }}</li>
+							<li>{{ ICONS['user'] }} {{ article.author }}</li>
+							<li>{{ ICONS['clock'] }} {{ article.locale_date }}</li>
 						</ul>
 						<h3>{{ article.title }}</h3>
 						{{ article.content }}
 					</div>
 		
 					<div class="blog-tags">
-						<h5>Tags :</h5>
+						<h5>Tags: </h5>
 						{% for tag in article.tags if tag %}
-						<a href="#"><i class="fa fa-tag"></i>{{ tag }}</a>
+						<a href="{{ SITEURL }}/tag/{{tag}}.html">{{ ICONS['tag'] }} {{ tag }}</a>
 						{% endfor %}
 					</div>
 				</div>

@@ -40,10 +40,10 @@
 					</div>
 					<div class="blog-content">
 						<ul class="blog-meta">
-							<li><i class="fa fa-user"></i>{{ article.author }}</li>
-							<li><i class="fa fa-clock-o"></i>{{ article.date | strftime('%d %B %Y') }}</li>
+							<li>{{ ICONS['user'] }} {{ article.author }}</li>
+							<li>{{ ICONS['clock'] }} {{ article.date | strftime('%d %B %Y') }}</li>
 							{% if article.shortpost != "true" %}
-							<li style="float:right"><a href="{{ SITEURL }}/blog/{{article.slug}}/"><button class="main-btn"><i class="fas fa-external-link-alt" style="color:white;"></i> Weiterlesen</button></a></li>
+							<li style="float:right"><a href="{{ SITEURL }}/blog/{{article.slug}}/"><button class="main-btn">{{ ICONS['external-link'] }} Weiterlesen</button></a></li>
 							{% endif %}
 						</ul>
 						<h3>{{ article.title }}</h3>
@@ -53,7 +53,7 @@
 					<div class="blog-tags">
 						<h5>Tags :</h5>
 						{% for tag in article.tags if tag %}
-						<a href="{{ SITEURL }}/tag/{{tag}}.html"><i class="fa fa-tag"></i>{{ tag }}</a>
+						<a href="{{ SITEURL }}/tag/{{tag}}.html">{{ ICONS['tag'] }} {{ tag }}</a>
 						{% endfor %}
 					</div>
 
