@@ -58,28 +58,13 @@
 </footer>
 <!-- /Footer -->
 
-<!-- Preloader -->
-<div id="preloader">
-    <div class="preloader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
-<!-- /Preloader -->
-
 <!-- jQuery Plugins -->
 {% assets filters="jsmin" , output="js/packed.js", "js/jquery.min.js", "js/bootstrap.min.js", "js/jquery.magnific-popup.js" %}
 <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
 {% endassets %}
 <script type="text/javascript">
 (function($) {
-	///////////////////////////
-	// Preloader
-	$(window).on('load', function() {
-		$("#preloader").delay(600).fadeOut();
-	});
+
 
 	///////////////////////////
 	// Scrollspy
