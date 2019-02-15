@@ -50,5 +50,10 @@ IMAGE_PROCESS = {
     'same-size-thumb': {'type': 'image', 'ops': ["scale_in 350 300 True"]}
 }
 
+STATIC_PATHS = ['images', 'extra']
+EXTRA_PATH_METADATA = {
+  'extra/favicon.ico': {'path': 'favicon.ico'}
+}
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
