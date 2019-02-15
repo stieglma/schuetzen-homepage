@@ -48,7 +48,7 @@
 					<div class="blog-content">
 						<ul class="blog-meta">
 							<li><i class="fa fa-user"></i>{{ article.author }}</li>
-							<li><i class="fa fa-clock-o"></i>{{ article.date | strftime('%d %B %Y') }}</li>
+							<li><i class="fa fa-clock-o"></i>{{ article.locale_date }}</li>
 							{% if article.shortpost != "true" %}
 							<li style="float:right"><a href="{{ SITEURL }}/blog/{{article.slug}}/"><button class="main-btn"><i class="fas fa-external-link-alt" style="color:white;"></i> Weiterlesen</button></a></li>
 							{% endif %}

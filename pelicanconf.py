@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-import locale
-locale.setlocale(locale.LC_ALL, "de_DE.utf8")
+
+DEFAULT_DATE_FORMAT = '%d %B %Y'
+LOCALE = "de_DE.utf8"
 
 AUTHOR = 'Thomas Stieglmaier'
 SITENAME = 'Schützenverein Edelweiß Gaishofen'
