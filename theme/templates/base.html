@@ -68,6 +68,12 @@
 		delegate: '.lightbox',
 		type: 'image'
 	});
+
+	$('#toggle-imp-button').click(function(){
+    $(this).text(function(i,old){
+        return old == 'Weiterlesen' ?  'Einklappen' : 'Weiterlesen';
+    });
+});
 })(jQuery);
 </script>
 </body>
