@@ -72,6 +72,12 @@ ul, ol {
     list-style: none
 }
 
+img.image-process-same-size-thumb {
+    width: 350px !important;
+    height: 233px !important;
+    background:lightgrey;
+}
+
 /* -- section  -- */
 
 .section {
