@@ -85,9 +85,12 @@ ul, ol {
 }
 
 img.image-process-same-size-thumb {
-    width: 350px !important;
-    height: 233px !important;
+    height: auto;
     background:lightgrey;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 /* -- section  -- */
