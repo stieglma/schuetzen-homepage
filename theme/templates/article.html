@@ -44,6 +44,19 @@
 						</ul>
 						<h3>{{ article.title }}</h3>
 						{{ article.content }}
+
+						{% if article.album %}
+							<div class="gallery">
+							{% for image in article.galleryimages %}
+							<div class="gallery-pic">
+								<a class="lightbox" href="{{ SITEURL }}/images/{{ article.album }}/{{ image }}">
+									<img class="image-process-gallery-thumb" src="{{ SITEURL }}/images/{{ article.album }}/{{ image }}" alt="">
+								</a>
+							</div>
+							{% endfor %}
+							</div>
+							<div style="clear:both;"></div>
+						{% endif %}
 					</div>
 		
 					<div class="blog-tags">

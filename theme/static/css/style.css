@@ -440,6 +440,12 @@ header {
 	Images
 \*------------------------------------*/
 
+.gallery-pic {
+    position: relative;
+    padding: 2px;
+    float: left;
+}
+
 .image-container {
     position: relative;
     padding: 20px;

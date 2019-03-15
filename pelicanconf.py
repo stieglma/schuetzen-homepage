@@ -38,7 +38,9 @@ SLUGIFY_SOURCE = 'title'
 SUMMARY_MAX_LENGTH = 65
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ["assets", "image_process", "minify"]
+PLUGINS = ["assets", "gallery", "image_process", "minify"]
+
+GALLERY_PATH = "images"
 
 MINIFY = {
   'remove_comments': True,
@@ -48,7 +50,8 @@ MINIFY = {
 
 DEFAULT_HEADER_IMAGE = "schuetzenverein.jpg"
 IMAGE_PROCESS = {
-    'same-size-thumb': {'type': 'image', 'ops': ["scale_in 350 300 True"]}
+    'same-size-thumb': {'type': 'image', 'ops': ["scale_in 350 300 True"]},
+    'gallery-thumb': {'type': 'image', 'ops': ["scale_in 200 133 True"]}
 }
 
 STATIC_PATHS = ['images', 'extra']

@@ -69,6 +69,12 @@
 		type: 'image'
 	});
 
+	$('.gallery-pic').magnificPopup({
+		delegate: '.lightbox',
+		type: 'image',
+		gallery: {enabled: true}
+	});
+
 	$('#toggle-imp-button').click(function(){
     $(this).text(function(i,old){
         return old == 'Weiterlesen' ?  'Einklappen' : 'Weiterlesen';
