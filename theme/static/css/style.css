@@ -556,6 +556,34 @@ header {
     opacity: 1;
 }
 
+/*------------------------------------*\
+	Logo Configuration
+\*------------------------------------*/
+.home-content > svg {
+    width: 80vw;
+    max-width: 400px;
+    text-align:center;
+    height:auto;
+}
+
+.footer-logo > a > svg {
+    width: 60vw;
+    max-width: 200px;
+    text-align:center;
+    height:auto;
+}
+
+.navbar-brand > a > svg {
+    max-height: 50px;
+    color: black;
+    fill: currentColor;
+    height: 50px;
+    width: 50px;
+}
+
+.navbar-brand > a > svg .st0, .navbar-brand > a > svg .st1{ 
+    fill: currentColor !important;
+}
 
 /*------------------------------------*\
 	Textcontainer
