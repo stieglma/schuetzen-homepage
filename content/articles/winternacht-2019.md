@@ -6,6 +6,7 @@ Slug: winternacht-2019
 Author: Thomas Stieglmaier
 Summary: Zusammen mit der freiwilligen Feuerwehr Gaishofen haben wir am zweiten Februar die erste "Gaishofener Winternacht" veranstaltet. Dank tollem Wetter konnten die vielen Besucher das Fest bis spät in die Nacht genießen. Ein herzliches Dankeschön an alle Helfer, Kuchen- und Getränkespender!
 HeaderPicture: winternacht-2019.jpg
+gallery: winternacht_2019
 
 Zusammen mit der freiwilligen Feuerwehr Gaishofen haben wir am zweiten Februar die erste "Gaishofener Winternacht" veranstaltet. Dank tollem Wetter konnten die vielen Besucher das Fest bis spät in die Nacht genießen.
 
