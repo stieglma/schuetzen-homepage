@@ -1,4 +1,4 @@
-Title: Erste Gaishofener Winternacht ein voller Erfolg
+Title: Geburtstagsscheibe von Klaus Opitz wird beim Königsschießen ausgeschossen
 Date: 2019-03-24
 Category: wettkampf
 Tags: geburtstagsscheibe, wettkampf
