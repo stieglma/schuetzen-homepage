@@ -20,3 +20,4 @@ python_version = "3.7"
 
 [scripts]
 dev-server = "make devserver"
+publish = "make html"
