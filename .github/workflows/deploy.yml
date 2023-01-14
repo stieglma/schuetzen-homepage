@@ -23,6 +23,7 @@ jobs:
         pip install pipenv
         pipenv install --dev
     - name: run code generation
+      run: |
         pipenv run publish
     - name: Deploy to gh-pages
       uses: JamesIves/github-pages-deploy-action@v4
