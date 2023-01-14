@@ -29,7 +29,7 @@ ARTICLE_URL = 'blog/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
 ARTICLE_ORDER_BY = 'date'
 
-DIRECT_TEMPLATES = ['index','blog', 'termine']
+DIRECT_TEMPLATES = ['index','blog']
 PAGINATED_TEMPLATES = {}
 DEFAULT_PAGINATION = False
 
