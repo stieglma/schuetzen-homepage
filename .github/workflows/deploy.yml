@@ -38,4 +38,5 @@ jobs:
       with:
         folder: output
         branch: gh-pages
+        ssh-key: ${{ secrets.PREVIEW_SSH_KEY }}
         repository-name: stieglma/schuetzen-homepage-preview
