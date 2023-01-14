@@ -606,31 +606,6 @@ header {
     border-radius: 50%;
 }
 
-.text-container:after {
-    content: "";
-    background-color: #1C1D21;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 0%;
-    z-index: -1;
-    -webkit-transition: 0.2s width;
-    transition: 0.2s width;
-}
-
-.text-container:hover:after {
-    width: 100%;
-}
-
-.text-container h3 {
-  -webkit-transition: 0.2s color;
-  transition: 0.2s color;
-}
-
-.text-container:hover h3 {
-    color: #fff;
-}
 
 #textlike {
     position: relative;
@@ -646,36 +621,6 @@ header {
     font-size: 32px;
     color: #6195FF;
     border-radius: 50%;
-}
-
-#textlike:after {
-    content: "";
-    background-color: #1C1D21;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 0%;
-    z-index: -1;
-    -webkit-transition: 0.2s width;
-    transition: 0.2s width;
-}
-
-#textlike:hover:after {
-    width: 100%;
-}
-
-#textlike h3 {
-  -webkit-transition: 0.2s color;
-  transition: 0.2s color;
-}
-
-#textlike:hover h3 {
-    color: #fff;
-}
-
-#textlike:hover h4 {
-    color: #fff;
 }
 
 /*------------------------------------*\
