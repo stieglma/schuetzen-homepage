@@ -21,7 +21,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pipenv
-        pipenv install --dev
+        pipenv install --dev --skip-lock
     - name: run code generation
       run: |
         pipenv run publish
