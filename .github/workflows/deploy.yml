@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -33,10 +36,17 @@ jobs:
     - name: run code generation
       run: |
         make html
-    - name: Deploy to gh-pages
+    - name: Deploy to preview gh-pages
+      if: github.event_name == 'pull_request'
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: output
         branch: gh-pages
         ssh-key: ${{ secrets.PREVIEW_SSH_KEY }}
         repository-name: stieglma/schuetzen-homepage-preview
+    - name: Deploy to gh-pages
+      if: github.event_name != 'pull_request'
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: output
+        branch: gh-pages
