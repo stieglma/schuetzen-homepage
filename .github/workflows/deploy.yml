@@ -38,3 +38,4 @@ jobs:
       with:
         folder: output
         branch: gh-pages
+        repository-name: stieglma/schuetzen-homepag-preview
