@@ -225,7 +225,9 @@ get_header('front'); ?>
             ?>
                 <div class="col-md-4 col-sm-6 team-member-card">
                     <div class="team-image-container">
-                        <img class="image-process-same-size-thumb" src="<?php echo esc_url($featured_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                        <a href="<?php the_permalink(); ?>">
+                            <img class="image-process-same-size-thumb" src="<?php echo esc_url($featured_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                        </a>
                     </div>
                     <div class="team-member-info">
                         <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>

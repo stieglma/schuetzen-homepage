@@ -57,7 +57,9 @@ get_header(); ?>
                                 <div class="col-md-4 col-sm-6 team-member-card">
                                     <article id="team-member-<?php the_ID(); ?>" <?php post_class('team-member-item'); ?>>
                                         <div class="image-container">
-                                            <img src="<?php echo esc_url($featured_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" class="team-member-photo">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <img src="<?php echo esc_url($featured_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" class="team-member-photo">
+                                            </a>
                                             <div class="overlay"></div>
                                             <div class="image-container-content">
                                                 <?php if ($position) : ?>

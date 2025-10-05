@@ -4,117 +4,105 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a German website for "Schützenverein Edelweiß Gaishofen" (a shooting club) built with Pelican, a Python static site generator. The site is localized for German (de_DE.UTF-8) and uses a custom theme with specialized plugins for image processing and galleries.
+This is a custom WordPress theme for "Schützenverein Edelweiß Gaishofen" (a German shooting club). The theme is localized for German and includes custom functionality for team member management, galleries, and club-specific features.
 
-## Development Commands
+## Development Setup
 
-### Using Makefile (Primary Method)
+### Local WordPress Development
+This theme should be placed in a WordPress installation's themes directory:
 ```bash
-# Generate the website
-make html
+# Copy theme to WordPress themes directory
+cp -r . /path/to/wordpress/wp-content/themes/schuetzen-edelweiss/
 
-# Clean output directory
-make clean
-
-# Regenerate files upon modification (watch mode)
-make regenerate
-
-# Build and serve locally at http://localhost:8000
-make serve
-
-# Serve with auto-regeneration (development mode)
-make devserver
-
-# Generate using production settings
-make publish
+# Or create a symbolic link for development
+ln -s /path/to/this/repo /path/to/wordpress/wp-content/themes/schuetzen-edelweiss
 ```
 
-### Using Invoke Tasks (Alternative Method)
-```bash
-# Build local version
-invoke build
-
-# Build with delete switch
-invoke rebuild
-
-# Auto-regenerate on file changes
-invoke regenerate
-
-# Serve at http://localhost:8000
-invoke serve
-
-# Build then serve
-invoke reserve
-
-# Build production version
-invoke preview
-
-# Clean generated files
-invoke clean
-```
-
-### Dependency Management
-```bash
-# Install dependencies (if using pipenv)
-pipenv install
-
-# Or using pip
-pip install -r requirements.txt
-```
+### WordPress Requirements
+- WordPress 5.0 or higher
+- PHP 7.4 or higher
+- Support for custom post types and taxonomies
 
 ## Architecture & Structure
 
-### Content Organization
-- **content/articles/**: Blog posts and articles in Markdown format
-- **content/images/**: Static images organized by event/topic subdirectories
-- **content/extra/**: Additional static files (favicon, etc.)
+### Theme Files
+- **index.php**: Main template file and fallback template
+- **front-page.php**: Custom front page template
+- **header.php**: Standard header template
+- **header-front.php**: Special header for front page
+- **footer.php**: Footer template
+- **style.css**: Main stylesheet with theme information
+- **functions.php**: Theme functions, hooks, and custom functionality
 
-### Theme System
-- **theme/templates/**: Jinja2 templates (base.html, index.html, blog.html, article.html, tag.html)
-- **theme/static/**: CSS, JavaScript, images, and web fonts
-- **theme/static/css/**: Bootstrap-based styling with custom CSS
-- **theme/static/js/**: jQuery, Bootstrap, and Magnific Popup libraries
+### Page Templates
+- **page.php**: Default page template
+- **single.php**: Single post template
+- **single-team_member.php**: Custom template for team member posts
+- **archive.php**: Archive page template
+- **archive-team_member.php**: Team members archive template
+- **taxonomy-team_category.php**: Team category taxonomy template
+- **404.php**: Error page template
+- **search.php**: Search results template
+- **searchform.php**: Search form template
 
-### Plugin Architecture
-- **plugins/gallery/**: Custom gallery plugin for organizing event photos
-- **plugins/assets/**: Asset bundling and optimization
-- **plugins/image_process/**: Image processing and thumbnail generation
-- Built-in minify plugin for HTML/CSS/JS optimization
+### Assets Organization
+- **assets/css/**: Additional stylesheets and CSS files
+- **assets/js/**: JavaScript files and libraries
+- **assets/img/**: Theme images, icons, and graphics
+- **assets/fonts/**: Web fonts and font files
 
-### Configuration Files
-- **pelicanconf.py**: Main development configuration with German locale settings
-- **publishconf.py**: Production configuration (if exists)
-- **Makefile**: Build automation with Pelican commands
-- **tasks.py**: Invoke-based task definitions
+### Include Files
+- **inc/customizer.php**: WordPress Customizer settings and controls
+- **inc/team-members.php**: Custom post type and taxonomy registration for team members
 
-## Key Configuration Settings
+### Template Parts
+- **template-parts/**: Reusable template components and partials
 
-The site uses German locale (`de_DE.UTF-8`) with specific customizations:
-- Custom URL structure for articles (`blog/{slug}/`)
-- Image processing with thumbnail generation
-- Gallery system for event photos
-- Minification for performance optimization
-- Custom icon set defined in pelicanconf.py for UI elements
+### Internationalization
+- **languages/**: Translation files for German localization
+
+## Key Features
+
+### Custom Post Types
+- **Team Members**: Custom post type for club members with categories
+- Team member profiles with photos, roles, and biographical information
+- Custom taxonomy for team categories/groups
+
+### Theme Customization
+- WordPress Customizer integration for theme options
+- Custom header and footer configurations
+- Responsive design with mobile-first approach
+
+### German Localization
+- Fully localized for German language (de_DE)
+- Translation-ready with proper text domains
+- German date formats and cultural conventions
 
 ## Development Workflow
 
-1. **Adding Content**: Create new Markdown files in `content/articles/`
-2. **Adding Images**: Place images in `content/images/` with appropriate subdirectories
-3. **Theme Changes**: Modify templates in `theme/templates/` or styles in `theme/static/css/`
-4. **Plugin Development**: Extend functionality in `plugins/` directory
-5. **Testing**: Use `make devserver` for live development with auto-reload
+1. **Template Changes**: Modify PHP template files in the root directory
+2. **Styling Updates**: Edit `style.css` or files in `assets/css/`
+3. **JavaScript**: Add/modify files in `assets/js/`
+4. **Functionality**: Extend `functions.php` or create new files in `inc/`
+5. **Testing**: Test in local WordPress installation with theme activated
 
-## Image Handling
+## Custom Functionality
 
-The site uses a sophisticated image processing system:
-- Thumbnails are automatically generated in multiple sizes
-- Gallery plugin organizes images by event/article
-- Image metadata and processing defined in pelicanconf.py
-- Supports various image formats with PIL/Pillow
+### Team Member Management
+- Custom post type registration for team members
+- Taxonomy system for organizing members by category/role
+- Custom template files for displaying member information
+- Archive and single views for team member content
 
-## Performance Features
+### Theme Hooks and Filters
+- Custom WordPress hooks and filters defined in `functions.php`
+- Theme-specific action and filter implementations
+- Integration with WordPress core functionality
 
-- HTML/CSS/JS minification via pelican-minify plugin
-- Asset bundling through webassets
-- Optimized image thumbnails
-- Static file optimization for web delivery
+## File Structure Best Practices
+
+- Follow WordPress template hierarchy conventions
+- Use proper WordPress coding standards
+- Implement security best practices (sanitization, validation)
+- Ensure responsive design compatibility
+- Maintain accessibility standards
