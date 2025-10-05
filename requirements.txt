@@ -1,8 +1,0 @@
-pelican
-markdown
-webassets
-cssmin
-jsmin
-pelican-minify
-pillow
-beautifulsoup4
