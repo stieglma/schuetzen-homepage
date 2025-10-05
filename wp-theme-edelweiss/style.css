@@ -1,0 +1,879 @@
+/*
+Theme Name: Edelweiss Gaishofen
+Theme URI: https://edelweiss-gaishofen.de
+Description: A configurable WordPress theme for shooting clubs. Originally converted from Pelican theme for Schützenverein Edelweiß Gaishofen.
+Version: 1.0.0
+Author: Thomas Stieglmaier
+Author URI: https://stieglmaier.me
+Text Domain: edelweiss-gaishofen
+Domain Path: /languages
+Requires at least: 5.0
+Tested up to: 6.3
+Requires PHP: 7.4
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: sports, club, shooting, german, bootstrap, gallery, one-page
+*/
+
+/* Base Styles */
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    color: #868F9B;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #10161A;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+/* SVG Icons */
+p > svg, a > svg, li > svg, button > svg {
+   height: 16px;
+   width: 16px;
+   fill: currentColor;
+}
+
+button.main-btn > svg {
+    fill: white;
+    height: 14px;
+    width: 14px;
+}
+
+/* Links */
+a {
+    color: #6195FF;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #4A7FE6;
+    text-decoration: none;
+}
+
+/* Buttons */
+.main-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 5px 0px;
+    background: #6195FF;
+    color: #FFF;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.main-btn:hover {
+    background: #4A7FE6;
+    color: #FFF;
+}
+
+.white-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 5px 0px;
+    background: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.white-btn:hover {
+    background: #FFF;
+    color: #10161A;
+}
+
+/* Container and Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.md-padding {
+    padding: 120px 0;
+}
+
+.sm-padding {
+    padding: 60px 0;
+}
+
+.s-padding {
+    padding: 30px 0;
+}
+
+.st-padding {
+    padding: 15px 0;
+}
+
+.bg-grey {
+    background: #FAFBFC;
+}
+
+.bg-dark {
+    background: #10161A;
+}
+
+/* Text styles */
+.text-center {
+    text-align: center;
+}
+
+.white-text {
+    color: #FFF;
+}
+
+/* Section header */
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-header .title {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.section-header .title:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 50px;
+    background: #6195FF;
+}
+
+/* Header & Navigation */
+header {
+    position: relative;
+}
+
+#nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+#nav.fixed-nav {
+    position: fixed;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+#nav.fixed-nav .main-nav a {
+    color: #10161A;
+}
+
+.navbar-brand svg {
+    height: 50px;
+    width: auto;
+    fill: #FFF;
+}
+
+#nav.fixed-nav .navbar-brand svg {
+    fill: #10161A;
+}
+
+.main-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.main-nav a {
+    display: block;
+    padding: 30px 0;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #6195FF;
+}
+
+/* Home section */
+#home {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(16, 22, 26, 0.7);
+    z-index: 2;
+}
+
+.home-wrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+#nav {
+    z-index: 999;
+}
+
+.home-content {
+    text-align: center;
+    color: #FFF;
+}
+
+.home-content svg {
+    fill: #FFF;
+    width: 80vw;
+    max-width: 400px;
+    text-align:center;
+    height:auto;
+}
+
+/* Statistics section */
+.stats-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.stats-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(16, 22, 26, 0.7);
+    z-index: 2;
+}
+
+.stats-section .container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Numbers section */
+.number {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.number svg {
+    height: 50px;
+    width: 50px;
+    fill: #6195FF;
+    margin-bottom: 20px;
+}
+
+/* Image containers */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(97, 149, 255, 0.9);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.image-container-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFF;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.image-container:hover .image-container-content {
+    opacity: 1;
+}
+
+.image-container-content span {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.image-container-content h3 {
+    color: #FFF;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.image-container-link a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #FFF;
+    border-radius: 50%;
+    color: #6195FF;
+}
+
+.image-container-link svg {
+    height: 20px;
+    width: 20px;
+}
+
+/* Text containers */
+.text-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Team Member Cards */
+.team-member-card {
+    margin-bottom: 40px;
+}
+
+.team-member-info {
+    text-align: center;
+    padding: 20px 15px 0;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.team-member-info h4 {
+    margin: 0 0 8px 0;
+    color: #10161A;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.team-position {
+    margin: 0 0 10px 0;
+    color: #6195FF;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.team-results-link {
+    color: #6195FF;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.team-results-link:hover {
+    color: #4A7FE6;
+    text-decoration: underline;
+}
+
+.team-member-card .image-container {
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.team-member-card .image-container img {
+    border-radius: 0;
+}
+
+.text-container svg {
+    height: 50px;
+    width: 50px;
+    fill: #6195FF;
+    margin-bottom: 20px;
+}
+
+.text-container h3 {
+    margin-bottom: 15px;
+}
+
+/* Blog styles */
+.blog-box {
+    margin-bottom: 60px;
+}
+
+.blog {
+    background: #FFF;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 30px;
+}
+
+.blog-meta {
+    list-style: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.blog-meta li {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.blog-meta svg {
+    margin-right: 5px;
+}
+
+.blog-tags {
+    padding: 20px 30px;
+    border-top: 1px solid #EEEEEE;
+}
+
+.blog-tags h5 {
+    display: inline-block;
+    margin: 0 15px 0 0;
+}
+
+.blog-tags a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: #FAFBFC;
+    color: #868F9B;
+    border-radius: 3px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.blog-tags a:hover {
+    background: #6195FF;
+    color: #FFF;
+}
+
+.blog-tags svg {
+    margin-right: 5px;
+}
+
+/* FooGallery Integration */
+.foogallery {
+    margin: 30px 0;
+}
+
+.foogallery .foogallery-container {
+    text-align: center;
+}
+
+.foogallery .foogallery-item {
+    margin: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.foogallery .foogallery-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.foogallery .foogallery-item img {
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.foogallery .foogallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* FooGallery Responsive Adjustments */
+@media (max-width: 767px) {
+    .foogallery {
+        margin: 20px 0;
+    }
+
+    .foogallery .foogallery-item {
+        margin: 2px;
+    }
+}
+
+/* Footer */
+#footer {
+    background: #10161A;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo svg {
+    height: 80px;
+    width: auto;
+    fill: #FFF;
+}
+
+/* Responsive Navigation */
+.nav-collapse {
+    display: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-collapse span,
+.nav-collapse span:before,
+.nav-collapse span:after {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #FFF;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.nav-collapse span:before {
+    content: "";
+    top: -8px;
+}
+
+.nav-collapse span:after {
+    content: "";
+    bottom: -8px;
+}
+
+#nav.open .nav-collapse span {
+    background: transparent;
+}
+
+#nav.open .nav-collapse span:before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#nav.open .nav-collapse span:after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .nav-collapse {
+        display: block;
+        float: right;
+        margin-top: 12px;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #FFF;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    #nav.open .main-nav {
+        max-height: 400px;
+    }
+
+    .main-nav li {
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid #EEEEEE;
+    }
+
+    .main-nav a {
+        padding: 15px 30px;
+        color: #10161A;
+    }
+}
+
+/* Training Section Specific Styles */
+.training-page-content {
+    /* Ensure page content fits within the training section design */
+}
+
+.training-page-content .wp-block-columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.training-page-content .wp-block-column {
+    flex: 1;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.training-page-content .wp-block-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.training-page-content .has-text-align-center {
+    text-align: center;
+}
+
+.training-page-error {
+    padding: 60px 0;
+    color: #868F9B;
+}
+
+.training-additional-info {
+    margin-top: 20px;
+}
+
+.training-additional-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Training Times Styling */
+#training .text-container ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+#training .text-container ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 16px;
+}
+
+#training .text-container ul li:last-child {
+    border-bottom: none;
+}
+
+#training .text-container ul li b {
+    color: #6195FF;
+    min-width: 100px;
+    display: inline-block;
+}
+
+/* Training Page Template Styles */
+.training-template-info {
+    background: #f8f9fa;
+    border-left: 4px solid #6195FF;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.training-template-info h4 {
+    margin-top: 0;
+    color: #6195FF;
+}
+
+.training-times-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.training-times-box .icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.training-times-box .icon svg {
+    height: 50px;
+    width: 50px;
+    fill: #6195FF;
+}
+
+.training-times-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.training-times-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.training-times-list li:last-child {
+    border-bottom: none;
+}
+
+.training-day {
+    font-weight: bold;
+    color: #6195FF;
+}
+
+.training-time {
+    color: #868F9B;
+}
+
+@media (max-width: 767px) {
+    .home-content svg {
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .md-padding {
+        padding: 60px 0;
+    }
+
+    .training-page-content .wp-block-columns {
+        flex-direction: column;
+    }
+
+    .training-page-content .wp-block-column {
+        flex: none;
+        width: 100%;
+    }
+
+    #training .text-container ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .training-times-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .training-time {
+        margin-top: 5px;
+    }
+
+    /* Team member cards responsive */
+    .team-member-info {
+        padding: 15px 10px;
+    }
+
+    .team-member-info h4 {
+        font-size: 16px;
+    }
+
+    /* Fix parallax background on mobile */
+    .stats-bg-img {
+        background-attachment: scroll;
+    }
+}

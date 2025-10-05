@@ -1,0 +1,197 @@
+/**
+ * Theme JavaScript functionality
+ * Edelweiss Gaishofen Theme
+ */
+
+(function($) {
+    'use strict';
+
+    $(document).ready(function() {
+        // Scrollspy for navigation
+        $('body').scrollspy({
+            target: '#nav',
+            offset: $(window).height() / 2
+        });
+
+        // Smooth scrolling for anchor links
+        $("#nav .main-nav a[href^='#']").on('click', function(e) {
+            e.preventDefault();
+            var hash = this.hash;
+
+            if ($(hash).length) {
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 600);
+            }
+        });
+
+        // Mobile navigation toggle
+        $('#nav .nav-collapse').on('click', function() {
+            $('#nav').toggleClass('open');
+        });
+
+        // Fixed navigation on scroll
+        $(window).on('scroll', function() {
+            var wScroll = $(this).scrollTop();
+
+            // Fixed nav
+            if (wScroll > 1) {
+                $('#nav').addClass('fixed-nav');
+            } else {
+                $('#nav').removeClass('fixed-nav');
+            }
+
+            // Back To Top Appear
+            if (wScroll > 700) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+
+        // Initialize Magnific Popup for images
+        $('.image-container').magnificPopup({
+            delegate: '.lightbox',
+            type: 'image',
+            closeBtnInside: false,
+            closeOnContentClick: true,
+            mainClass: 'mfp-img-mobile',
+            image: {
+                verticalFit: true
+            }
+        });
+
+        // Gallery popup
+        $('.gallery-pic').magnificPopup({
+            delegate: '.lightbox',
+            type: 'image',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0,1]
+            },
+            image: {
+                titleSrc: function(item) {
+                    return item.el.find('img').attr('alt');
+                }
+            }
+        });
+
+        // Iframe popup (for external links)
+        $('.iframe-link').magnificPopup({
+            type: 'iframe',
+            iframe: {
+                markup: '<div class="mfp-iframe-scaler">'+
+                            '<div class="mfp-close"></div>'+
+                            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                        '</div>',
+                srcAction: 'iframe_src'
+            }
+        });
+
+        // Toggle button functionality for collapsible content
+        $('#toggle-imp-button').click(function() {
+            var button = $(this);
+            var strings = edelweiss_ajax_object.strings;
+
+            button.text(function(i, old) {
+                return old == strings.read_more ? strings.collapse : strings.read_more;
+            });
+        });
+
+        // Counter animation on scroll
+        function animateCounters() {
+            $('.counter').each(function() {
+                var $this = $(this);
+                var countTo = $this.text();
+
+                // Only animate if it contains numbers
+                if (/\d/.test(countTo)) {
+                    var numOnly = countTo.replace(/[^\d]/g, '');
+                    if (numOnly) {
+                        $({ countNum: 0 }).animate({
+                            countNum: parseInt(numOnly)
+                        }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function() {
+                                var prefix = countTo.replace(/\d/g, '').substring(0, countTo.search(/\d/));
+                                $this.text(prefix + Math.floor(this.countNum));
+                            },
+                            complete: function() {
+                                $this.text(countTo);
+                            }
+                        });
+                    }
+                }
+            });
+        }
+
+        // Animate counters when they come into view
+        $(window).on('scroll', function() {
+            var countersTop = $('#numbers').offset().top;
+            var countersBottom = countersTop + $('#numbers').outerHeight();
+            var scrollTop = $(this).scrollTop();
+            var windowHeight = $(this).height();
+
+            if (scrollTop + windowHeight > countersTop && scrollTop < countersBottom) {
+                if (!$('#numbers').hasClass('animated')) {
+                    $('#numbers').addClass('animated');
+                    animateCounters();
+                }
+            }
+        });
+
+        // Search form enhancement
+        $('.search-form input[type="search"]').on('focus', function() {
+            $(this).closest('.search-form').addClass('focused');
+        }).on('blur', function() {
+            $(this).closest('.search-form').removeClass('focused');
+        });
+
+        // Image lazy loading fallback
+        $('img[data-src]').each(function() {
+            var $img = $(this);
+            $img.attr('src', $img.data('src'));
+        });
+
+        // Form validation enhancement
+        $('form').on('submit', function() {
+            var isValid = true;
+            $(this).find('input[required], textarea[required]').each(function() {
+                if (!$(this).val()) {
+                    $(this).addClass('error');
+                    isValid = false;
+                } else {
+                    $(this).removeClass('error');
+                }
+            });
+            return isValid;
+        });
+
+        // Accessibility improvements
+        $('.main-nav a').on('keydown', function(e) {
+            if (e.which === 13) { // Enter key
+                $(this).click();
+            }
+        });
+
+        // Print styles helper
+        window.addEventListener('beforeprint', function() {
+            $('body').addClass('printing');
+        });
+
+        window.addEventListener('afterprint', function() {
+            $('body').removeClass('printing');
+        });
+    });
+
+    // Resize handler
+    $(window).on('resize', function() {
+        // Close mobile menu on resize
+        if ($(window).width() > 991) {
+            $('#nav').removeClass('open');
+        }
+    });
+
+})(jQuery);

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="350" height="300" viewBox="0 0 350 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="350" height="300" fill="#FAFBFC"/>
+  <circle cx="175" cy="120" r="35" fill="#868F9B"/>
+  <path d="M125 190 C125 175, 147.5 165, 175 165 C202.5 165, 225 175, 225 190 L225 220 L125 220 Z" fill="#868F9B"/>
+  <text x="175" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#868F9B">Team Member Photo</text>
+
+  <!-- Crosshairs icon in corner -->
+  <g transform="translate(310, 20)">
+    <circle cx="15" cy="15" r="15" fill="#6195FF" opacity="0.8"/>
+    <path d="M18 15h-2v-2h-2v2h-2v2h2v2h2v-2h2v-2z m6-6v12h-2V9H9v-2h12z" fill="#FFF"/>
+    <path d="M15 8h-1v-1h-1v1h-1v1h1v1h1v-1h1v-1z m0 4h-1v1h-1v-1h-1v-1h1v-1h1v1h1v1z m-4-2v1h-1v-1h1z m6 0v1h-1v-1h1z" fill="#FFF"/>
+  </g>
+</svg>

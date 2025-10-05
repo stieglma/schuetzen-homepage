@@ -1,0 +1,209 @@
+# German (Germany) language file for Edelweiss Gaishofen theme
+# Copyright (C) 2023 Thomas Stieglmaier
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Edelweiss Gaishofen 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-01 12:00+0000\n"
+"PO-Revision-Date: 2023-12-01 12:00+0000\n"
+"Last-Translator: Thomas Stieglmaier\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Manual\n"
+
+# Theme setup and navigation
+msgid "Primary Menu"
+msgstr "Hauptmenü"
+
+# Front page sections
+msgid "About Us"
+msgstr "Über uns"
+
+msgid "Training"
+msgstr "Training"
+
+msgid "People / Teams"
+msgstr "Personen / Mannschaften"
+
+msgid "Contact & Imprint"
+msgstr "Kontakt & Impressum"
+
+msgid "Imprint"
+msgstr "Impressum"
+
+msgid "Privacy Policy"
+msgstr "Datenschutz"
+
+# Statistics section
+msgid "Active Shooters"
+msgstr "Aktive Schützen"
+
+msgid "Pistol Teams"
+msgstr "Pistolenmannschaften"
+
+msgid "Rifle Teams"
+msgstr "Gewehrmannschaften"
+
+msgid "Rifle Teams<br />Supported"
+msgstr "Gewehrmannschaften<br />Aufgelegt"
+
+msgid "Youth Team"
+msgstr "Jugendmannschaft"
+
+# Training section
+msgid "Current Training Times"
+msgstr "Aktuelle Trainingszeiten"
+
+msgid "We shoot at %s at the following times:"
+msgstr "Wir schießen bei den %s zu folgenden Zeiten:"
+
+msgid "Tuesday"
+msgstr "Dienstag"
+
+msgid "Friday"
+msgstr "Freitag"
+
+msgid "from 18:00"
+msgstr "ab 18:00 Uhr"
+
+msgid "from 18:00 (Youth training!)"
+msgstr "ab 18:00 Uhr (Jugendtraining!)"
+
+msgid "Our home competitions also take place at the same location."
+msgstr "Unsere Heimwettkämpfe finden ebenfalls am gleichen Ort statt."
+
+msgid "No training page selected or page not found."
+msgstr "Keine Trainingsseite ausgewählt oder Seite nicht gefunden."
+
+msgid "Configure Training Section"
+msgstr "Trainingsbereich konfigurieren"
+
+# Teams section
+msgid "Results"
+msgstr "Ergebnisse"
+
+msgid "No team members configured yet. Create team member posts in the WordPress admin."
+msgstr "Noch keine Mannschaftsmitglieder konfiguriert. Erstellen Sie Mannschaftsmitglieder-Beiträge im WordPress Admin-Bereich."
+
+msgid "Add Team Member"
+msgstr "Mannschaftsmitglied hinzufügen"
+
+# Admin notices and help
+msgid "Training Page Template Available"
+msgstr "Trainingsseiten-Vorlage verfügbar"
+
+msgid "Looking to create a training page? We have a pre-built template with professional styling and structure."
+msgstr "Möchten Sie eine Trainingsseite erstellen? Wir haben eine vorgefertigte Vorlage mit professionellem Styling und Struktur."
+
+msgid "View Training Template"
+msgstr "Trainingsvorlage ansehen"
+
+msgid "Dismiss"
+msgstr "Verwerfen"
+
+msgid "The training section is set to use a WordPress page, but no page is selected. <a href=\"%s\">Configure training section</a> or <a href=\"%s\">view the template</a> for creating a training page."
+msgstr "Der Trainingsbereich ist für eine WordPress-Seite konfiguriert, aber es ist keine Seite ausgewählt. <a href=\"%s\">Trainingsbereich konfigurieren</a> oder <a href=\"%s\">Vorlage ansehen</a> zum Erstellen einer Trainingsseite."
+
+# Post meta boxes
+msgid "Post Options"
+msgstr "Beitrags-Optionen"
+
+msgid "Short Post"
+msgstr "Kurzer Beitrag"
+
+msgid "Check this if this is a short post (no \"Read More\" button will be shown)"
+msgstr "Aktivieren Sie dies für kurze Beiträge (kein \"Weiterlesen\" Button wird angezeigt)"
+
+# About section default text
+msgid "We, the Edelweißschützen Gaishofen have been around since 1963. We are a sports-oriented club that participates in many competitions and championships."
+msgstr "Wir, die Edelweißschützen Gaishofen, gibt es bereits seit 1963. Wir sind ein sportorientierter Verein, der an vielen Wettkämpfen und Meisterschaften teilnimmt."
+
+msgid "But the social aspect is not neglected either. We recently organized a great winter festival in Gaishofen together with the volunteer fire brigade, which was attended by well over 100 guests."
+msgstr "Aber auch der gesellschaftliche Aspekt kommt nicht zu kurz. Wir haben kürzlich zusammen mit der Freiwilligen Feuerwehr ein tolles Winterfest in Gaishofen organisiert, das von weit über 100 Gästen besucht wurde."
+
+msgid "If you are interested in getting to know us, just stop by on one of our training days, or contact one of our contacts directly. We look forward to every guest!"
+msgstr "Wenn Sie Interesse haben, uns kennenzulernen, schauen Sie einfach an einem unserer Trainingstage vorbei, oder wenden Sie sich direkt an eine unserer Kontaktpersonen. Wir freuen uns über jeden Gast!"
+
+# Team members
+msgid "Team Members"
+msgstr "Mannschaftsmitglieder"
+
+msgid "Team Member"
+msgstr "Mannschaftsmitglied"
+
+msgid "All Team Members"
+msgstr "Alle Mannschaftsmitglieder"
+
+msgid "Add New Team Member"
+msgstr "Neues Mannschaftsmitglied hinzufügen"
+
+msgid "Edit Team Member"
+msgstr "Mannschaftsmitglied bearbeiten"
+
+msgid "New Team Member"
+msgstr "Neues Mannschaftsmitglied"
+
+msgid "View Team Member"
+msgstr "Mannschaftsmitglied ansehen"
+
+msgid "Search Team Members"
+msgstr "Mannschaftsmitglieder suchen"
+
+msgid "No team members found"
+msgstr "Keine Mannschaftsmitglieder gefunden"
+
+msgid "No team members found in Trash"
+msgstr "Keine Mannschaftsmitglieder im Papierkorb gefunden"
+
+msgid "Team Categories"
+msgstr "Mannschaftskategorien"
+
+msgid "Team Category"
+msgstr "Mannschaftskategorie"
+
+msgid "All Team Categories"
+msgstr "Alle Mannschaftskategorien"
+
+msgid "Add New Category"
+msgstr "Neue Kategorie hinzufügen"
+
+msgid "Edit Category"
+msgstr "Kategorie bearbeiten"
+
+msgid "Update Category"
+msgstr "Kategorie aktualisieren"
+
+msgid "New Category Name"
+msgstr "Neuer Kategoriename"
+
+msgid "Popular Categories"
+msgstr "Beliebte Kategorien"
+
+msgid "Search Categories"
+msgstr "Kategorien suchen"
+
+msgid "Not Found"
+msgstr "Nicht gefunden"
+
+# Read more/less functionality
+msgid "Read More"
+msgstr "Weiterlesen"
+
+msgid "Collapse"
+msgstr "Einklappen"
+
+# Blog
+msgid "Blog"
+msgstr "Blog"
+
+# Fallback menu items
+msgid "Start"
+msgstr "Start"
+
+msgid "Contact & Imprint"
+msgstr "Kontakt & Impressum"
