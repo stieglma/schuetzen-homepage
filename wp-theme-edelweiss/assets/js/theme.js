@@ -49,45 +49,6 @@
             }
         });
 
-        // Initialize Magnific Popup for images
-        $('.image-container').magnificPopup({
-            delegate: '.lightbox',
-            type: 'image',
-            closeBtnInside: false,
-            closeOnContentClick: true,
-            mainClass: 'mfp-img-mobile',
-            image: {
-                verticalFit: true
-            }
-        });
-
-        // Gallery popup
-        $('.gallery-pic').magnificPopup({
-            delegate: '.lightbox',
-            type: 'image',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0,1]
-            },
-            image: {
-                titleSrc: function(item) {
-                    return item.el.find('img').attr('alt');
-                }
-            }
-        });
-
-        // Iframe popup (for external links)
-        $('.iframe-link').magnificPopup({
-            type: 'iframe',
-            iframe: {
-                markup: '<div class="mfp-iframe-scaler">'+
-                            '<div class="mfp-close"></div>'+
-                            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-                        '</div>',
-                srcAction: 'iframe_src'
-            }
-        });
 
         // Toggle button functionality for collapsible content
         $('#toggle-imp-button').click(function() {

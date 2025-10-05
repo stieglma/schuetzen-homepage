@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-define('EDELWEISS_VERSION', '1.0.0');
+define('EDELWEISS_VERSION', '1.1.1');
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -95,19 +95,11 @@ function edelweiss_scripts() {
         '3.3.7'
     );
 
-    // Enqueue Magnific Popup CSS
-    wp_enqueue_style(
-        'edelweiss-magnific-popup',
-        get_template_directory_uri() . '/assets/css/magnific-popup.css',
-        array(),
-        '1.1.0'
-    );
-
     // Enqueue theme stylesheet
     wp_enqueue_style(
         'edelweiss-style',
         get_stylesheet_uri(),
-        array('edelweiss-bootstrap', 'edelweiss-magnific-popup'),
+        array('edelweiss-bootstrap'),
         EDELWEISS_VERSION
     );
 
@@ -123,20 +115,11 @@ function edelweiss_scripts() {
         true
     );
 
-    // Enqueue Magnific Popup JS
-    wp_enqueue_script(
-        'edelweiss-magnific-popup-js',
-        get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js',
-        array('jquery'),
-        '1.1.0',
-        true
-    );
-
     // Enqueue theme JS
     wp_enqueue_script(
         'edelweiss-script',
         get_template_directory_uri() . '/assets/js/theme.js',
-        array('jquery', 'edelweiss-bootstrap-js', 'edelweiss-magnific-popup-js'),
+        array('jquery', 'edelweiss-bootstrap-js'),
         EDELWEISS_VERSION,
         true
     );

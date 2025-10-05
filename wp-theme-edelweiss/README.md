@@ -243,7 +243,6 @@ GPL v2 or later - https://www.gnu.org/licenses/gpl-2.0.html
 
 - Original Pelican theme by Thomas Stieglmaier
 - Bootstrap CSS framework
-- Magnific Popup for lightboxes
 - Font Awesome icons (converted to SVG)
 - Google Fonts (Rubik)
 

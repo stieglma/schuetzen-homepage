@@ -51,23 +51,6 @@
         wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();
     });
 
-    $('.image-container').magnificPopup({
-        delegate: '.lightbox',
-        type: 'image'
-    });
-
-
-    $('.iframe-link').magnificPopup({
-        type: 'iframe',
-        iframe: {
-            markup: '<div class="mfp-iframe-scaler">'+
-                        '<div class="mfp-close"></div>'+
-                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-                    '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
-
-            srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
-        }
-    });
 
     $('#toggle-imp-button').click(function(){
         $(this).text(function(i,old){

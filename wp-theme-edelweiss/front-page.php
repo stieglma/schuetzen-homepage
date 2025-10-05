@@ -187,7 +187,7 @@ get_header('front'); ?>
                             <span><?php echo esc_html($title); ?></span>
                             <h3><?php echo esc_html($description); ?></h3>
                             <div class="image-container-link">
-                                <a class="lightbox" href="<?php echo esc_url($image); ?>">
+                                <a href="<?php echo esc_url($image); ?>" target="_blank" rel="noopener">
                                     <?php echo edelweiss_get_icon('external-link'); ?>
                                 </a>
                             </div>
