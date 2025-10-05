@@ -50,11 +50,11 @@ get_header('front'); ?>
             );
 
             $stat_labels = array(
-                'active_shooters' => __('Active Shooters', 'edelweiss-gaishofen'),
-                'pistol_teams' => __('Pistol Teams', 'edelweiss-gaishofen'),
-                'rifle_teams' => __('Rifle Teams', 'edelweiss-gaishofen'),
-                'rifle_supported_teams' => __('Rifle Teams<br />Supported', 'edelweiss-gaishofen'),
-                'youth_teams' => __('Youth Team', 'edelweiss-gaishofen'),
+                'active_shooters' => __('Aktive Schützen', 'edelweiss-gaishofen'),
+                'pistol_teams' => __('Pistolenmannschaften', 'edelweiss-gaishofen'),
+                'rifle_teams' => __('Luftgewehrmannschaften', 'edelweiss-gaishofen'),
+                'rifle_supported_teams' => __('Luftgewehrmannschaften aufgelegt', 'edelweiss-gaishofen'),
+                'youth_teams' => __('Jugendmannschaft', 'edelweiss-gaishofen'),
             );
 
             $stat_icons = array(
@@ -224,30 +224,16 @@ get_header('front'); ?>
                     }
             ?>
                 <div class="col-md-4 col-sm-6 team-member-card">
-                    <div class="image-container">
+                    <div class="team-image-container">
                         <img class="image-process-same-size-thumb" src="<?php echo esc_url($featured_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
-                        <div class="overlay"></div>
-                        <div class="image-container-content">
-                            <?php if (has_excerpt()) : ?>
-                                <p><?php echo esc_html(wp_trim_words(get_the_excerpt(), 15)); ?></p>
-                            <?php endif; ?>
-                            <div class="image-container-link">
-                                <a class="lightbox" href="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>">
-                                    <?php echo edelweiss_get_icon('zoom'); ?>
-                                </a>
-                                <a href="<?php the_permalink(); ?>" style="margin-left: 10px;">
-                                    <?php echo edelweiss_get_icon('external-link'); ?>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="team-member-info">
-                        <h4><?php the_title(); ?></h4>
+                        <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                         <?php if ($position) : ?>
                             <p class="team-position"><?php echo esc_html($position); ?></p>
                         <?php endif; ?>
                         <?php if (!empty($results_link)) : ?>
-                            <p><a href="<?php echo esc_url($results_link); ?>" class="team-results-link" target="_blank"><?php _e('Results', 'edelweiss-gaishofen'); ?></a></p>
+                            <p class="team-results"><a href="<?php echo esc_url($results_link); ?>" class="team-results-link" target="_blank"><?php _e('Results', 'edelweiss-gaishofen'); ?></a></p>
                         <?php endif; ?>
                     </div>
                 </div>
