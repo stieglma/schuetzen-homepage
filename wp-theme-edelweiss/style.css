@@ -219,6 +219,33 @@ header {
     fill: #10161A;
 }
 
+/* Grey navigation for static pages */
+#nav.grey {
+    background: #FFF;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#nav.grey .main-nav a {
+    color: #10161A;
+}
+
+#nav.grey .navbar-brand svg {
+    fill: #10161A;
+}
+
+#nav.grey .nav-collapse span,
+#nav.grey .nav-collapse span:before,
+#nav.grey .nav-collapse span:after {
+    background: #10161A;
+}
+
+/* Ensure grey navbar stays properly styled when it becomes fixed */
+#nav.grey.fixed-nav {
+    background: #FFF;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
 .main-nav {
     list-style: none;
     margin: 0;
