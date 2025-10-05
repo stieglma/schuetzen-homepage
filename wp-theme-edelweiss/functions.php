@@ -38,6 +38,7 @@ function edelweiss_setup() {
     // Register navigation menus
     register_nav_menus(array(
         'primary' => esc_html__('Primary Menu', 'edelweiss-gaishofen'),
+        'footer' => esc_html__('Footer Menu', 'edelweiss-gaishofen'),
     ));
 
     // Switch default core markup for search form, comment form, and comments
@@ -162,10 +163,26 @@ function edelweiss_fallback_menu() {
         '#training' => __('Training', 'edelweiss-gaishofen'),
         '#impressions' => __('Teams', 'edelweiss-gaishofen'),
         get_permalink(get_option('page_for_posts')) => __('Blog', 'edelweiss-gaishofen'),
-        '#contact' => __('Contact & Imprint', 'edelweiss-gaishofen'),
     );
 
     echo '<ul class="main-nav nav navbar-nav navbar-right">';
+    foreach ($menu_items as $url => $title) {
+        echo '<li><a href="' . esc_url($url) . '">' . esc_html($title) . '</a></li>';
+    }
+    echo '</ul>';
+}
+
+/**
+ * Fallback menu for footer when no menu is assigned
+ */
+function edelweiss_footer_fallback_menu() {
+    $menu_items = array(
+        home_url('/impressum/') => __('Imprint', 'edelweiss-gaishofen'),
+        home_url('/datenschutz/') => __('Privacy Policy', 'edelweiss-gaishofen'),
+        home_url('/kontakt/') => __('Contact', 'edelweiss-gaishofen'),
+    );
+
+    echo '<ul class="footer-nav">';
     foreach ($menu_items as $url => $title) {
         echo '<li><a href="' . esc_url($url) . '">' . esc_html($title) . '</a></li>';
     }

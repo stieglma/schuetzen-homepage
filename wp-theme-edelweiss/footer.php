@@ -17,6 +17,24 @@
                 </div>
             </div>
         </div>
+
+        <?php if (has_nav_menu('footer')) : ?>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer-menu">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'footer',
+                        'menu_class' => 'footer-nav',
+                        'container' => false,
+                        'fallback_cb' => 'edelweiss_footer_fallback_menu',
+                        'depth' => 1,
+                    ));
+                    ?>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
     </div>
 </footer>
 

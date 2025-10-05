@@ -645,6 +645,46 @@ header {
     fill: #FFF;
 }
 
+.footer-menu {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.footer-nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-nav a {
+    color: #868F9B;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .footer-nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .footer-menu {
+        margin-top: 20px;
+    }
+}
+
 /* Responsive Navigation */
 .nav-collapse {
     display: none;
