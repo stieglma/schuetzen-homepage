@@ -802,23 +802,29 @@ body.blog html, body.archive html, body.single html {
     }
 
     .main-nav {
-        position: fixed;
-        top: 60px;
-        right: 0;
-        height: calc(100vh - 60px);
-        width: 250px;
-        transform: translateX(100%);
-        margin: 0;
-        overflow-y: auto;
-        background: #1C1D21;
-        transition: transform 0.3s ease;
-        z-index: 9999;
-        padding: 0;
-        float: none;
+        position: fixed !important;
+        top: 60px !important;
+        right: 0 !important;
+        height: calc(100vh - 60px) !important;
+        width: 250px !important;
+        transform: translateX(100%) !important;
+        margin: 0 !important;
+        overflow-y: auto !important;
+        background: #1C1D21 !important;
+        transition: transform 0.3s ease !important;
+        z-index: 9999 !important;
+        padding: 0 !important;
+        float: none !important;
+        list-style: none !important;
     }
 
     #nav.open .main-nav {
-        transform: translateX(0%);
+        transform: translateX(0%) !important;
+        background: red !important;
+        border: 5px solid yellow !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
     }
 
     .main-nav li {

@@ -38,7 +38,11 @@
         $('.nav-collapse').on('click', function(e) {
             e.preventDefault();
             console.log('Burger menu clicked'); // Debug log
-            $('#nav').toggleClass('open');
+            var nav = $('#nav');
+            nav.toggleClass('open');
+            console.log('Nav has open class:', nav.hasClass('open')); // Debug log
+            console.log('Nav element:', nav[0]); // Debug log
+            console.log('Main nav element:', $('.main-nav')[0]); // Debug log
         });
 
         // Fixed navigation on scroll
