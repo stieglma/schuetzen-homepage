@@ -216,10 +216,12 @@ header {
 }
 
 .navbar-brand .logo {
-    height: 50px;
+    height: 35px;
     width: auto;
-    max-width: 200px;
+    max-width: 150px;
     object-fit: contain;
+    vertical-align: middle;
+    margin: 8px 0;
 }
 
 #nav.fixed-nav .navbar-brand svg {
