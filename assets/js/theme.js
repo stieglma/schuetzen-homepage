@@ -38,36 +38,30 @@
         $('.nav-collapse').off('click').on('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            console.log('Burger menu clicked'); // Debug log
             var nav = $('#nav');
             var mainNav = $('.main-nav');
-            console.log('Nav classes before:', nav.attr('class'));
 
             if (nav.hasClass('open')) {
                 nav.removeClass('open');
-                // Direct CSS fallback
                 mainNav.css('transform', 'translateX(100%)');
-                console.log('Removed open class and hid menu');
             } else {
                 nav.addClass('open');
-                // Direct CSS fallback
                 mainNav.css({
                     'transform': 'translateX(0%)',
-                    'background': 'red',
+                    'background': '#1C1D21',
                     'position': 'fixed',
                     'top': '60px',
                     'right': '0',
                     'width': '250px',
                     'height': 'calc(100vh - 60px)',
                     'z-index': '99999',
-                    'border': '5px solid yellow'
+                    'padding': '0',
+                    'margin': '0',
+                    'list-style': 'none',
+                    'overflow-y': 'auto',
+                    'box-shadow': '0 2px 10px rgba(0,0,0,0.3)'
                 });
-                console.log('Added open class and showed menu');
             }
-
-            console.log('Nav classes after:', nav.attr('class'));
-            console.log('Nav has open class:', nav.hasClass('open')); // Debug log
-            console.log('Main nav computed style:', window.getComputedStyle(mainNav[0]).transform);
         });
 
         // Fixed navigation on scroll
