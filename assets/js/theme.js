@@ -61,6 +61,32 @@
                     'overflow-y': 'auto',
                     'box-shadow': '0 2px 10px rgba(0,0,0,0.3)'
                 });
+
+                // Ensure menu links have proper styling
+                mainNav.find('a').css({
+                    'color': '#FFF',
+                    'display': 'block',
+                    'padding': '18px 25px',
+                    'text-decoration': 'none',
+                    'font-size': '14px',
+                    'font-weight': '500',
+                    'text-transform': 'uppercase',
+                    'letter-spacing': '1px',
+                    'border-left': '4px solid transparent'
+                });
+
+                // Add hover effects
+                mainNav.find('a').off('mouseenter mouseleave').on('mouseenter', function() {
+                    $(this).css({
+                        'background-color': '#6195FF',
+                        'border-left-color': '#FFF'
+                    });
+                }).on('mouseleave', function() {
+                    $(this).css({
+                        'background-color': 'transparent',
+                        'border-left-color': 'transparent'
+                    });
+                });
             }
         });
 

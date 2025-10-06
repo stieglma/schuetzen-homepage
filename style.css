@@ -787,10 +787,12 @@ body.blog html, body.archive html, body.single html {
 
 #nav.open .nav-collapse span:before {
     transform: translateY(0px) rotate(-135deg);
+    background: #10161A;
 }
 
 #nav.open .nav-collapse span:after {
     transform: translateY(-4px) rotate(135deg);
+    background: #10161A;
 }
 
 /* Media Queries */
