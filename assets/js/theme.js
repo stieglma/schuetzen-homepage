@@ -99,15 +99,20 @@
 
         // Animate counters when they come into view
         $(window).on('scroll', function() {
-            var countersTop = $('#numbers').offset().top;
-            var countersBottom = countersTop + $('#numbers').outerHeight();
-            var scrollTop = $(this).scrollTop();
-            var windowHeight = $(this).height();
+            var $numbers = $('#numbers');
 
-            if (scrollTop + windowHeight > countersTop && scrollTop < countersBottom) {
-                if (!$('#numbers').hasClass('animated')) {
-                    $('#numbers').addClass('animated');
-                    animateCounters();
+            // Check if numbers element exists
+            if ($numbers.length && $numbers.offset()) {
+                var countersTop = $numbers.offset().top;
+                var countersBottom = countersTop + $numbers.outerHeight();
+                var scrollTop = $(this).scrollTop();
+                var windowHeight = $(this).height();
+
+                if (scrollTop + windowHeight > countersTop && scrollTop < countersBottom) {
+                    if (!$numbers.hasClass('animated')) {
+                        $numbers.addClass('animated');
+                        animateCounters();
+                    }
                 }
             }
         });
