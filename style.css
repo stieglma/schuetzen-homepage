@@ -280,6 +280,30 @@ header {
     overflow: hidden;
 }
 
+/* Ensure blog pages can scroll properly */
+#blog {
+    min-height: auto;
+    overflow: visible;
+}
+
+/* Fix for body overflow on blog pages */
+body.blog, body.archive, body.single {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+}
+
+/* Ensure html can scroll on blog pages */
+html {
+    height: auto;
+    overflow-y: auto;
+}
+
+body.blog html, body.archive html, body.single html {
+    height: auto;
+    overflow-y: auto;
+}
+
 .bg-img {
     position: absolute;
     top: 0;

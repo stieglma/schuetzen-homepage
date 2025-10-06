@@ -417,6 +417,19 @@ header {
     height: 100vh;
 }
 
+/* Ensure blog pages can scroll properly */
+#blog {
+    min-height: auto;
+    overflow: visible;
+}
+
+/* Fix body height and overflow for blog pages */
+body.blog, body.archive, body.single {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+}
+
 #home .home-wrapper {
     position: absolute;
     left: 0px;

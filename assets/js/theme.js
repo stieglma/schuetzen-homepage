@@ -7,6 +7,15 @@
     'use strict';
 
     $(document).ready(function() {
+        // Fix scroll issues on blog pages
+        if ($('body').hasClass('blog') || $('body').hasClass('archive') || $('body').hasClass('single')) {
+            $('html, body').css({
+                'height': 'auto',
+                'overflow-y': 'auto',
+                'overflow-x': 'hidden'
+            });
+        }
+
         // Scrollspy for navigation
         $('body').scrollspy({
             target: '#nav',
