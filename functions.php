@@ -37,7 +37,8 @@ function edelweiss_setup() {
 
     // Register navigation menus
     register_nav_menus(array(
-        'primary' => esc_html__('Primary Menu', 'edelweiss-gaishofen'),
+        'primary' => esc_html__('Primary Menu (Logged Out Users)', 'edelweiss-gaishofen'),
+        'primary-logged-in' => esc_html__('Primary Menu (Logged In Users)', 'edelweiss-gaishofen'),
         'footer' => esc_html__('Footer Menu', 'edelweiss-gaishofen'),
     ));
 
@@ -164,6 +165,11 @@ function edelweiss_fallback_menu() {
         '#impressions' => __('Teams', 'edelweiss-gaishofen'),
         get_permalink(get_option('page_for_posts')) => __('Blog', 'edelweiss-gaishofen'),
     );
+
+    // Add logout link for logged-in users
+    if (is_user_logged_in()) {
+        $menu_items[wp_logout_url()] = __('Logout', 'edelweiss-gaishofen');
+    }
 
     echo '<ul class="main-nav nav navbar-nav navbar-right">';
     foreach ($menu_items as $url => $title) {

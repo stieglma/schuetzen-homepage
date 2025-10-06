@@ -34,12 +34,22 @@
             </div>
 
             <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'menu_class' => 'main-nav nav navbar-nav navbar-right',
-                'container' => false,
-                'fallback_cb' => 'edelweiss_fallback_menu',
-            ));
+            // Display different menus based on user login status
+            if (is_user_logged_in()) {
+                wp_nav_menu(array(
+                    'theme_location' => 'primary-logged-in',
+                    'menu_class' => 'main-nav nav navbar-nav navbar-right',
+                    'container' => false,
+                    'fallback_cb' => 'edelweiss_fallback_menu',
+                ));
+            } else {
+                wp_nav_menu(array(
+                    'theme_location' => 'primary',
+                    'menu_class' => 'main-nav nav navbar-nav navbar-right',
+                    'container' => false,
+                    'fallback_cb' => 'edelweiss_fallback_menu',
+                ));
+            }
             ?>
         </div>
     </nav>
