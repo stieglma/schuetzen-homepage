@@ -747,6 +747,7 @@ body.blog html, body.archive html, body.single html {
     margin-right: 5px;
     cursor: pointer;
     z-index: 99999;
+    pointer-events: auto;
 }
 
 .nav-collapse span {
@@ -795,7 +796,7 @@ body.blog html, body.archive html, body.single html {
 /* Media Queries */
 @media (max-width: 767px) {
     .nav-collapse {
-        display: block;
+        display: block !important;
         float: right;
         margin-top: 12px;
     }

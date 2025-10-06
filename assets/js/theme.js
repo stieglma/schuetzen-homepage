@@ -35,7 +35,9 @@
         });
 
         // Mobile navigation toggle
-        $('#nav .nav-collapse').on('click', function() {
+        $('.nav-collapse').on('click', function(e) {
+            e.preventDefault();
+            console.log('Burger menu clicked'); // Debug log
             $('#nav').toggleClass('open');
         });
 
