@@ -215,6 +215,13 @@ header {
     fill: #FFF;
 }
 
+.navbar-brand .logo {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
 #nav.fixed-nav .navbar-brand svg {
     fill: #10161A;
 }
@@ -232,6 +239,11 @@ header {
 
 #nav.grey .navbar-brand svg {
     fill: #10161A;
+}
+
+#nav.grey .navbar-brand .logo,
+#nav.fixed-nav .navbar-brand .logo {
+    /* PNG logo already black, no need for color changes */
 }
 
 #nav.grey .nav-collapse span,

@@ -24,7 +24,7 @@
             <div class="navbar-header">
                 <div class="navbar-brand">
                     <a href="<?php echo esc_url(home_url('/')); ?>">
-                        <?php echo edelweiss_get_icon('logo-gaishofen'); ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Schützenverein Edelweiß Gaishofen" class="logo">
                     </a>
                 </div>
                 <!-- responsive navigation for small devices-->
