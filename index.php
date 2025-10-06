@@ -26,19 +26,17 @@ get_header(); ?>
                                 <ul class="blog-meta">
                                     <li><?php echo edelweiss_get_icon('user'); ?> <?php the_author(); ?></li>
                                     <li><?php echo edelweiss_get_icon('clock'); ?> <?php echo get_the_date('j F Y'); ?></li>
-                                    <?php if (!get_post_meta(get_the_ID(), '_edelweiss_short_post', true)) : ?>
-                                        <li style="float:right">
-                                            <a href="<?php the_permalink(); ?>">
-                                                <button class="main-btn">
-                                                    <?php echo edelweiss_get_icon('external-link'); ?> <?php _e('Read More', 'edelweiss-gaishofen'); ?>
-                                                </button>
-                                            </a>
-                                        </li>
-                                    <?php endif; ?>
                                 </ul>
                                 <h3><?php the_title(); ?></h3>
                                 <?php if (is_home() || is_archive()) : ?>
                                     <?php the_excerpt(); ?>
+                                    <?php if (!get_post_meta(get_the_ID(), '_edelweiss_short_post', true)) : ?>
+                                        <div class="blog-read-more" style="margin-top: 20px;">
+                                            <a href="<?php the_permalink(); ?>" class="main-btn">
+                                                <?php echo edelweiss_get_icon('external-link'); ?> Weiterlesen
+                                            </a>
+                                        </div>
+                                    <?php endif; ?>
                                 <?php else : ?>
                                     <?php the_content(); ?>
                                 <?php endif; ?>
@@ -46,7 +44,7 @@ get_header(); ?>
 
                             <?php if (has_tag()) : ?>
                                 <div class="blog-tags">
-                                    <h5><?php _e('Tags:', 'edelweiss-gaishofen'); ?></h5>
+                                    <h5>Tags:</h5>
                                     <?php
                                     $tags = get_the_tags();
                                     if ($tags) :
@@ -69,8 +67,8 @@ get_header(); ?>
             <?php
             // Pagination
             the_posts_pagination(array(
-                'prev_text' => __('Previous', 'edelweiss-gaishofen'),
-                'next_text' => __('Next', 'edelweiss-gaishofen'),
+                'prev_text' => 'Vorherige',
+                'next_text' => 'Nächste',
             ));
             ?>
 
@@ -79,8 +77,8 @@ get_header(); ?>
                 <main id="main" class="col-md-8 col-md-offset-2 blog-box">
                     <div class="blog">
                         <div class="blog-content">
-                            <h3><?php _e('Nothing found', 'edelweiss-gaishofen'); ?></h3>
-                            <p><?php _e('It seems we can\'t find what you\'re looking for. Perhaps searching can help.', 'edelweiss-gaishofen'); ?></p>
+                            <h3>Nichts gefunden</h3>
+                            <p>Es scheint, wir können nicht finden, was Sie suchen. Vielleicht kann die Suche helfen.</p>
                             <?php get_search_form(); ?>
                         </div>
                     </div>

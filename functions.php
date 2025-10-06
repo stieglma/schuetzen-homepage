@@ -295,6 +295,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/team-members.php';
 
+
 /**
  * Add admin notice for training page template
  */
