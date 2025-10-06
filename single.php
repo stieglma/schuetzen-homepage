@@ -31,7 +31,7 @@ get_header(); ?>
 
                             <?php
                             wp_link_pages(array(
-                                'before' => '<div class="page-links">' . esc_html__('Pages:', 'edelweiss-gaishofen'),
+                                'before' => '<div class="page-links">Seiten:',
                                 'after'  => '</div>',
                             ));
                             ?>
@@ -39,7 +39,7 @@ get_header(); ?>
 
                         <?php if (has_tag()) : ?>
                             <div class="blog-tags">
-                                <h5><?php _e('Tags:', 'edelweiss-gaishofen'); ?></h5>
+                                <h5>Tags:</h5>
                                 <?php
                                 $tags = get_the_tags();
                                 if ($tags) :
@@ -59,8 +59,8 @@ get_header(); ?>
                     <?php
                     // Post navigation
                     the_post_navigation(array(
-                        'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'edelweiss-gaishofen') . '</span> <span class="nav-title">%title</span>',
-                        'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'edelweiss-gaishofen') . '</span> <span class="nav-title">%title</span>',
+                        'prev_text' => '<span class="nav-subtitle">Letzter:</span> <span class="nav-title">%title</span>',
+                        'next_text' => '<span class="nav-subtitle">Nächster:</span> <span class="nav-title">%title</span>',
                     ));
                     ?>
 
